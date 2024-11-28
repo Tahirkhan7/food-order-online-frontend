@@ -17,7 +17,7 @@ export default function ProductPage() {
   const [swiperInstance, setSwiperInstance] = useState(null);
 
   const handleSwiper = (swiper) => {
-    setSwiperInstance(swiper); // Save swiper instance for later use
+    setSwiperInstance(swiper);
   };
 
   return (
@@ -118,9 +118,59 @@ export default function ProductPage() {
       <section className={styles.foodItemsMain}>
         <div className={styles.container}>
           <div className={styles.foodItemsRow}>
-            <DiscountItem />
-            <DiscountItem />
-            <DiscountItem />
+            <div className={`${styles.foodItemsCol}`}>
+              <div
+                className={styles.foodItemsBlock}
+                style={{
+                  backgroundImage: "url(./images/foodItem.jpg)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <p>McDonald’s East London</p>
+                <h3>First Order Discount</h3>
+                <div className={styles.discoutOffer}>-20%</div>
+                <button>
+                  <img src="./images/plus.png" className={styles.addIcon} />
+                </button>
+              </div>
+            </div>
+
+            <div className={`${styles.foodItemsCol}`}>
+              <div
+                className={styles.foodItemsBlock}
+                style={{
+                  backgroundImage: "url(./images/foodItem2.png)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <p>McDonald’s West London</p>
+                <h3>Vegan Discount</h3>
+                <div className={styles.discoutOffer}>-20%</div>
+                <button>
+                  <img src="./images/plus.png" className={styles.addIcon} />
+                </button>
+              </div>
+            </div>
+
+            <div className={`${styles.foodItemsCol}`}>
+              <div
+                className={styles.foodItemsBlock}
+                style={{
+                  backgroundImage: "url(./images/foodItem3.png)",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                <p>McDonald’s South London</p>
+                <h3>Free ice Cream Discount</h3>
+                <div className={styles.discoutOffer}>-100%</div>
+                <button>
+                  <img src="./images/plus.png" className={styles.addIcon} />
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -129,10 +179,7 @@ export default function ProductPage() {
         <div className={styles.container}>
           <h2>Burgers</h2>
           <div className={styles.foodItemsRow}>
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
+            <FastFoodItem category="burger" />
           </div>
         </div>
       </section>
@@ -141,10 +188,7 @@ export default function ProductPage() {
         <div className={styles.container}>
           <h2>Fries</h2>
           <div className={styles.foodItemsRow}>
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
+          <FastFoodItem category="fries" />
           </div>
         </div>
       </section>
@@ -153,10 +197,7 @@ export default function ProductPage() {
         <div className={styles.container}>
           <h2>Cold Drinks</h2>
           <div className={styles.foodItemsRow}>
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
-            <FastFoodItem />
+          <FastFoodItem category="colddrinks" />
           </div>
         </div>
       </section>
