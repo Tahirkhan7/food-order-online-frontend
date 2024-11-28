@@ -5,10 +5,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar } from "swiper/modules";
 import { useRef, useState } from "react";
-
 import styles from "./ProductPage.module.css";
-
-import DiscountItem from "../../components/DiscountItem";
 import FastFoodItem from "../../components/FastFoodItem";
 
 export default function ProductPage() {

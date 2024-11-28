@@ -27,17 +27,15 @@ export default function FastFoodItem({ addClass, category }) {
     }
   }, [category]);
 
-
   return (
     <>
-    {foods.length > 0 && (
-          foods.map((food) => (
-      <div
-        className={`${
-          addClass !== "colMedium" ? styles.foodItemsCol : styles.colMedium
-        }`}
-      >
-        
+      {foods.length > 0 &&
+        foods.map((food) => (
+          <div
+            className={`${
+              addClass !== "colMedium" ? styles.foodItemsCol : styles.colMedium
+            }`}
+          >
             <div key={food._id} className={styles.fastFoodBlock}>
               <div className={styles.fastFoodInfo}>
                 <h5>{food.name}</h5>
@@ -48,12 +46,15 @@ export default function FastFoodItem({ addClass, category }) {
                 <img src={food.image} alt={food.name} />
               </div>
               <button>
-                <img src="./images/plus.png" className={styles.addIcon} alt="Add" />
+                <img
+                  src="./images/plus.png"
+                  className={styles.addIcon}
+                  alt="Add"
+                />
               </button>
             </div>
-      </div>
-          ))
-        )}
+          </div>
+        ))}
     </>
-  );  
+  );
 }
