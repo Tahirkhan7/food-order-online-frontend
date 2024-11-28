@@ -1,0 +1,252 @@
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.restBannerBg{
+  background-image: url(./images/rest-banner.jpg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 12px;
+}
+.bannerOverlay{
+  background-color: #03081FE5;
+  padding: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bannerInfo{
+  color: white;
+  width: 60%;
+  position: relative;
+}
+.orderTiming{
+  display: flex;
+  align-items: center;
+  gap: 20px
+}
+.bannerInfo p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.bannerInfo h1{
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 80px;
+  margin-bottom: 10px;
+}
+.orderTiming button img{
+  width: 25px;
+}
+.bannerInfo button {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  padding: 12px 30px 12px 25px;
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bannerImg {
+  width: 40%;
+  position: relative;
+}
+.bannerImg .dishImg{
+  border-radius: 12px;
+  width: 100%;
+}
+.ratingBlock{
+  position: absolute;
+  left: -40px;
+  bottom: -15px;
+}
+.ratingBlock img{
+  width: 100px;
+}
+.timeLimit {
+  padding: 14px 60px;
+  background-color: #FC8A06;
+  color: white;
+  border-radius: 0px 12px 12px 0px;
+  position: absolute;
+  left: -50px;
+  bottom: -75px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.offerFields{
+  display: flex;
+  padding: 60px 40px 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.offerFields h3{
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 0px;
+}
+
+.offerFields input{
+  padding: 14px 40px 14px 50px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  border: 1px solid #03081F;
+}
+
+
+.searchSec{
+  position: relative;
+}
+.searchImg{
+  position: absolute;
+  left: 15px;
+  top: 13px;
+}
+
+.foodListSec{
+  background-color: #FC8A06;
+}
+.foodListSec ul{
+  display: flex;
+  padding: 28px 15px;
+}
+.foodListSec ul li a{
+  padding: 6px 16px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  border-radius: 30px;
+  transition: ease .6s;
+}
+.foodListSec ul li a.Offers{
+  padding: 6px 30px;
+  background-color: #03081F;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  border-radius: 30px;
+  transition: ease .6s;
+}
+.foodListSec ul li a:hover{
+  background-color: #03081F;
+  color: white;
+}
+
+
+.foodItemsMain{
+  padding: 80px 15px;
+}
+.foodItemsRow{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 35px;
+  column-gap: 20px;
+}
+.foodItemsCol{
+  width: 32.2%;
+}
+
+.foodItemsBlock{
+  background-image: url(./images/foodItem.jpg);
+  background-position: center center;
+  background-size: cover;
+  border-radius: 12px;
+  height: 260px;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+.foodItemsBlock p{
+  font-size: 14px;
+  font-weight: 500;
+  color: #FC8A06;
+}
+.foodItemsBlock h3{
+  color: #fff;
+}
+.addIcon {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: #fff;
+  width: 40px;
+  padding: 20px 18px 18px 20px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 10px;
+}
+.discoutOffer {
+  background-color: #03081F;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 16px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+.foodItemsBlockMain{
+  padding: 00px 15px 80px;
+}
+.foodItemsBlockMain h2 {
+  font-size: 34px;
+  line-height: 40px;
+  margin-bottom: 25px;
+}
+.fastFoodBlock {
+  background-color: white;
+  border-radius: 13px;
+  padding: 20px;
+  box-shadow: 5px 5px 34px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+}
+.fastFoodBlock button{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  background-color: #ffffffc7;
+  width: 40px;
+  padding: 20px 18px 18px 20px;
+  border-top-left-radius: 40px;
+}
+.fastFoodInfo p{
+  margin: 10px 0px;
+  font-size: 12px;
+}
+.fastFoodInfo{
+  width: 60%;
+}
+.fastFoodImg{
+  width: 40%;
+}
+.fastFoodImg img{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+.foodItemsBlockMain.second h2 {
+  color: #FC8A06;
+}

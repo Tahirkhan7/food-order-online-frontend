@@ -1,0 +1,56 @@
+.foodItemsCol{
+    width: 32.2%;
+}
+.colMedium{
+  width: 48.5% !important;
+}
+  
+.foodItemsBlock{
+    background-image: url(./images/foodItem.jpg);
+    background-position: center center;
+    background-size: cover;
+    border-radius: 12px;
+    height: 260px;
+    padding: 12px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .foodItemsBlock p{
+    font-size: 14px;
+    font-weight: 500;
+    color: #FC8A06;
+  }
+  .foodItemsBlock h3{
+    color: #fff;
+  }
+  .foodItemsBlock button {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ffffffc7;
+    padding: 20px 18px 18px 20px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+  }
+  .foodItemsBlock button img{
+    width: 40px;
+    transition: ease .3s;
+  }
+  .foodItemsBlock button:hover img{
+    transform: rotate(90deg);
+  }
+  .discoutOffer {
+    background-color: #03081F;
+    position: absolute;
+    top: 0px;
+    right: 18px;
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    padding: 10px 16px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+  

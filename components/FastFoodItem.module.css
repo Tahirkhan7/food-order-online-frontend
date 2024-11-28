@@ -1,0 +1,50 @@
+
+.foodItemsCol{
+    width: 32.2%;
+  }
+  .colMedium{
+    width: 48.5% !important;
+  }
+.fastFoodBlock {
+    background-color: white;
+    border-radius: 13px;
+    padding: 20px;
+    box-shadow: 5px 5px 34px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+  }
+  .fastFoodBlock button{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #ffffffc7;
+    padding: 20px 18px 18px 20px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 10px;
+  }
+  .fastFoodBlock button img{
+    width: 40px;
+    transition: ease .3s;
+  }
+  .fastFoodBlock button:hover img{
+    transform: rotate(90deg);
+  }
+  .fastFoodInfo p{
+    margin: 10px 0px;
+    font-size: 12px;
+  }
+  .fastFoodInfo{
+    width: 60%;
+  }
+  .fastFoodImg{
+    width: 40%;
+  }
+  .fastFoodImg img{
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }

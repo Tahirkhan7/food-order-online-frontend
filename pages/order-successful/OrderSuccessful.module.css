@@ -1,0 +1,65 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .OrderSuccessfulSection {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    width: 450px;
+  }
+  
+  .successIcon {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+  
+  .title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #000;
+  }
+  
+  .description {
+    font-size: 14px;
+    color: #83858A;
+    margin-bottom: 20px;
+  }
+  .footerSection{
+    border: 1px solid #808080;
+    border-radius: 15px;
+    padding-bottom: 10px;
+  }
+  .orderList {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 20px;
+  }
+  
+  .orderList li {
+    font-size: 14px;
+    color: #000;
+    margin: 5px 0;
+  }
+  
+  .backButton {
+    display: inline-block;
+    width: 70%;
+    padding: 10px 20px;
+    background: #ff9800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  

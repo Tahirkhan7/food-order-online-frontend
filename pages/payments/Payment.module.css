@@ -1,0 +1,142 @@
+.container {
+  padding: 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.paymentSection {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.paymentAndMethodSection {
+  display: flex;
+  align-items: flex-start;
+}
+
+.paymentSection .header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.paymentSection .header img {
+  cursor: pointer;
+}
+.paymentSection .header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.paymentSection .paymentItems {
+  width: 63%;
+  padding-top: 15px;
+  background-color: #fff;
+}
+.paymentSection .paymentItems .payment {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ffe8ce;
+  border-radius: 100px;
+}
+.paymentSection .paymentItems .paymentOther {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  border: 1px solid #ffe8ce;
+  border-radius: 100px;
+  padding: 10px 10px 10px 2px;
+}
+.first {
+  margin-top: 15px;
+}
+.paymentSection .paymentItems .payment .paymentImage {
+  border: 1px solid #000;
+  border-radius: 50% !important;
+  background-color: #ffe8ce;
+  padding: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.paymentSection .paymentItems .paymentOther .paymentImage {
+  border: 1px solid #ffe8ce;
+  border-radius: 50% !important;
+  background-color: #ffe8ce;
+  padding: 7px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.paymentSection .paymentItems .paymentOther:last-child p {
+  border-radius: 8px;
+  margin-left: 15px;
+}
+.paymentSection .paymentItems .paymentOther input[type="checkbox"] {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+.paymentSection .paymentItems .paymentOther input[type="checkbox"]:checked {
+  background-color: #ffe8ce;
+}
+.paymentSection .paymentItems .paymentDetails {
+  flex: 1;
+}
+.paymentSection .paymentItems .paymentName {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.paymentSection .paymentItems .availabelBalance {
+  font-size: 14px;
+  color: #888;
+}
+.paymentSection .paymentItems .choosePayment {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+  margin-right: 10px;
+}
+.paymentSection .summary {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 0 20px 0;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+.paymentSection .summary .amount {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.end {
+  border-bottom: 1px solid #202938;
+  padding-top: 10px;
+}
+.summary .amount .amountHeading {
+  color: #83858a;
+}
+.summary .total .totalPrice {
+  color: #000;
+}
+.summary .paymentBtn {
+  background-color: #fc8a06;
+  color: #fff;
+  border-radius: 30px;
+  margin: 20px 0 20px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}

@@ -1,0 +1,150 @@
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0px auto;
+}
+.offerBlock{
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.secondBlock{
+  display: flex;
+  width: 58%;
+}
+.offerBlock img{
+  margin: 0 15px 0px 25px;
+}
+.offerBlock p{
+  font-size: 12px;
+  line-height: 22.5px;
+  font-weight: 500;
+}
+.offerBlock button{
+  font-size: 12px;
+  line-height: 22.5px;
+  font-weight: 700;
+  color: #FC8A06;
+  text-decoration: underline;
+}
+
+.locationBlock{
+  display: flex;
+  align-items: center;
+  width: 58%;
+}
+.locationBlock img{
+  margin-right: 25px;
+}
+.locationBlock p{
+  font-size: 12px;
+  line-height: 22.5px;
+  color: #03081F;
+  font-weight: 500;
+}
+.locationBlock button{
+  font-size: 12px;
+  line-height: 22.5px;
+  font-weight: 400;
+  color: #FC8A06;
+  text-decoration: underline;
+  margin-left: 15px;
+}
+
+.cartBlock{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #028643;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 45%;
+  padding: 0px 20px;
+}
+.myCart img{
+  margin-right: 15px;
+  width: 35px;
+}
+.cartBlock p{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 26px;
+  color: white;
+}
+
+.myCart{
+  display: flex;
+  align-items: center;
+}
+.myCart button img{
+  width: 35px;
+}
+
+
+
+.topHeader {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #0000001A;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  border-top: unset;
+}
+
+
+.navHeader{
+  display: flex;
+  align-items: center;
+  padding: 0px 40px;
+}
+.logoSec {
+  width: 20%;
+}
+.navSec{
+  width: 80%;
+}
+
+
+
+.headerNavMain{
+  padding: 30px 15px;
+}
+.navListItems{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.navListItems li a.active{
+  background-color: #FC8A06 ;
+  color: #fff ;
+}
+.navListItems li a{
+  padding: 8px 30px;
+  border-radius: 120px;
+  color: #000;
+  transition: all ease .6s;
+  font-size: 14px;
+  font-weight: 500;
+}
+.navListItems li a:hover{
+  background-color: #FC8A06;
+  color: #fff;
+}
+.navListItems li button {
+  padding: 10px 30px 10px 25px;
+  background-color: #03081F;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 120px;
+}
