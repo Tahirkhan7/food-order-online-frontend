@@ -1,10 +1,27 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { getAllFoodByCategory } from "../services/food";
 import styles from "./FastFoodItem.module.css";
 import { toast } from "react-toastify";
+import { AppContext } from "../context/AppContext";
+import { SearchContext } from "../context/SearchContext";
 
 export default function FastFoodItem({ addClass, category }) {
+  const { searchQuery } = useContext(SearchContext);
+
   const [foods, setFoods] = useState([]);
+  const { updateFoodCart } = useContext(AppContext);
+
+  const handleAddToCart = (food) => {
+    const data = {
+      id: food._id,
+      quantity: 1,
+      name: food.name.split(" ").slice(0, 3).join(" "),
+      description: food.description.split(" ").slice(0, 6).join(" "),
+      price: food.price,
+      image: food.image,
+    };
+    updateFoodCart([data]);
+  };
 
   useEffect(() => {
     const getAllFoods = async () => {
@@ -27,13 +44,18 @@ export default function FastFoodItem({ addClass, category }) {
     }
   }, [category]);
 
+  const filteredFoods = foods.filter((food) =>
+    food.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <>
-      {foods.length > 0 &&
-        foods.map((food) => (
+      {filteredFoods.length > 0 &&
+        filteredFoods.map((food) => (
           <div
+            key={food._id}
             className={`${
-              addClass !== "colMedium" ? styles.foodItemsCol : styles.colMedium
+              addClass == null ? styles.foodItemsCol : styles.colMedium
             }`}
           >
             <div key={food._id} className={styles.fastFoodBlock}>
@@ -50,6 +72,7 @@ export default function FastFoodItem({ addClass, category }) {
                   src="./images/plus.png"
                   className={styles.addIcon}
                   alt="Add"
+                  onClick={() => handleAddToCart(food)}
                 />
               </button>
             </div>

@@ -98,6 +98,7 @@
   position: relative;
   align-items: center;
   justify-content: space-between;
+  max-width: 30%;
 }
 .cardDetail {
   display: flex;
@@ -108,7 +109,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10%;
+  width: 15%;
   height: 40px;
   border-radius: 50%;
   background: #f5f5f5;
@@ -126,4 +127,15 @@
   border: none;
   cursor: pointer;
   width: 10%;
+}
+.errorMsge {
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: #db371f;
+  display: block;
+  position: relative;
+  opacity: 1;
+  margin-top: 6px;
+  z-index: 1;
+  transition: 0.2s;
 }

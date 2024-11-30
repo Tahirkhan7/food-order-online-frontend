@@ -6,3 +6,10 @@ export const getAllFoodByCategory = async (category) => {
   );
   return res;
 };
+
+export const getAllFoodsByCartToken = async (token) => {
+  const res = await axios.get(`${import.meta.env.VITE_BASE_URL}/api/orders/${token}`, {
+    params: { token },
+  });
+  return res;
+};

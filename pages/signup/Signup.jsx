@@ -2,6 +2,9 @@ import styles from "./Signup.module.css";
 import { useState } from "react";
 import { register } from "../../services/auth";
 import { Link, useNavigate } from "react-router-dom";
+import Footer from "../../components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -74,9 +77,11 @@ export default function Signup() {
     try {
       console.log(formData)
       const res = await register(formData);
-
       if (res.status === 201) {
-        navigate("/login");
+        toast.success(res.data.message);
+        setTimeout(()=>{
+          navigate("/login");
+        }, 1000)
       }
     } catch (error) {
       if (error.response && error.response.status === 400) {
@@ -222,6 +227,8 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      <Footer />
+      <ToastContainer />
     </>
   );
 }

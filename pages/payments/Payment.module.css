@@ -72,21 +72,25 @@
   border-radius: 8px;
   margin-left: 15px;
 }
-.paymentSection .paymentItems .paymentOther input[type="checkbox"] {
+.paymentSection .paymentItems .paymentOther input[type="radio"] {
   width: 1.3em;
   height: 1.3em;
   background-color: white;
   border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid #837f7f;
   appearance: none;
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
 }
-.paymentSection .paymentItems .paymentOther input[type="checkbox"]:checked {
-  background-color: #ffe8ce;
+.paymentSection .paymentItems .paymentOther input[type="radio"]:checked {
+  background-color: #fc8a06;
 }
+.paymentSection .paymentItems .paymentOther:last-child input[type="radio"] {
+  display: none; /* Hides the radio button for the last child */
+}
+
 .paymentSection .paymentItems .paymentDetails {
   flex: 1;
 }

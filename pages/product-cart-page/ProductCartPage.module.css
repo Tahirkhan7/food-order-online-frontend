@@ -206,13 +206,27 @@
 
 /*---------------------------------------- Google Map Section ----------------------------------------*/
 .mapRow {
+  background-position: center center;
+  background-size: cover;
+  padding: 40px 80px 60px;
+  position: relative; /* To contain the absolute positioning of the map */
+   /* Set height for the map container */
+  border-radius: 15px;
+  overflow: hidden; /* Prevent map overflow */
+  box-shadow: 5px 5px 14px 0px #00000040;
+}
+
+
+
+/* .mapRow {
   background-image: url(./images/map.jpg);
   background-position: center center;
   background-size: cover;
   padding: 40px 80px 60px;
   border-radius: 15px;
   box-shadow: 5px 5px 14px 0px #00000040;
-}
+  z-index: -1;
+} */
 .mapMainSec {
   margin: 70px 0px;
 }
@@ -222,6 +236,8 @@
   border-radius: 15px;
   width: 35%;
   color: white;
+  position: relative; /* Stack on top of the map */
+  z-index: 10; /* Ensure it appears above the map */
 }
 .mapInfoBlock h2 {
   font-size: 24px;
@@ -338,6 +354,9 @@
 .productCartLeft {
   width: 65%;
 }
+.productCartLeftFull {
+  width: 100%;
+}
 .productCartRight {
   width: 40%;
 }
@@ -353,12 +372,14 @@
 }
 
 .header {
-  background: #007f0e;
+  background: #028643;
   color: #fff;
-  padding: 16px;
+  padding: 30px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .header h2 {
@@ -608,36 +629,103 @@
   font-weight: bold;
   line-height: 1;
 }
-
-.similarRestaurants h2 {
-  margin-top: 50px;
+.foodItemsCol {
+  width: 31.1% !important;
 }
-.similarRestaurants .restaurants {
+.colMedium {
+  width: 48.5% !important;
+}
+
+.foodItemsBlock {
+  border-radius: 12px;
+  height: 260px;
+  padding: 12px 20px;
   display: flex;
-}
-.similarRestaurants .restaurant {
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
-  width: 300px;
-  height: 200px;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 30px 0 30px;
 }
-
-.restaurant .restaurantImage {
-  width: 82%;
-  height: 80%;
+.foodItemsBlock p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fc8a06;
 }
-
-.restaurant .restaurantName {
+.foodItemsBlock h3 {
+  color: #fff;
+}
+.foodItemsBlock button {
   position: absolute;
-  bottom: 0;
-  width: 82%;
-  background-color: #fc8a06;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 16px;
-  font-weight: bold;
+  right: 0px;
+  bottom: 0px;
+  background-color: #ffffffc7;
+  padding: 20px 18px 18px 20px;
+  border-top-left-radius: 40px;
   border-bottom-right-radius: 10px;
+}
+.foodItemsBlock button img {
+  width: 40px;
+  transition: ease 0.3s;
+}
+.foodItemsBlock button:hover img {
+  transform: rotate(90deg);
+}
+.discoutOffer {
+  background-color: #03081f;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  padding: 10px 16px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.shareCartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff9c00;
+  padding: 20px 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.textContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.textContainer span {
+  width: 100%;
+  font-weight: 600;
+}
+
+.shareIcon {
+  width: auto;
+}
+
+.copyButton {
+  background-color: white;
+  color: #ff9c00;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 40%;
+}
+
+.copyButton:hover {
+  background-color: #ffb540;
+  color: white;
 }

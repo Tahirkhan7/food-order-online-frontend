@@ -1,0 +1,321 @@
+.items {
+  padding: 16px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.editButton {
+  padding: 5px 15px;
+  background: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+}
+.editButton p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  align-items: center;
+}
+
+.editButton p span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.quantity {
+  background: orange;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 50%;
+  font-size: 0.9rem;
+}
+.details {
+  width: 100%;
+  padding-left: 15px;
+}
+.details h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #03081f;
+}
+
+.details p {
+  margin: 0;
+  color: #000000;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #028643;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.summary {
+  padding: 16px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.summary p {
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #03081f;
+}
+
+.summary p span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #212121;
+}
+
+.total {
+  font-weight: bold;
+}
+.btnActions{
+    padding: 16px;
+}
+.actions {
+  padding: 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.freeItem {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("./images/selectDown.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+.coupon {
+  display: flex;
+  gap: 8px;
+}
+
+.couponInput {
+  flex: 1;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-image: url("./images/forwardArrow.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  position: relative;
+  right: 0;
+  cursor: pointer;
+}
+.couponInput::placeholder {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.couponButton {
+  background: green;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.deliveryInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+}
+.deliveryInfo:first-child {
+  margin-right: 10px;
+}
+.deliveryInfo img {
+  width: 50px;
+  height: 50px;
+}
+.checkoutOptions {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.checkout {
+  padding: 16px;
+}
+.checkoutButton {
+  width: 100%;
+  background: #028643;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-image: url(./images/forwardArrowWhite.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  position: relative;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  font-size: 0.875rem;
+  text-align: center;
+  position: relative;
+  opacity: 0;
+  transition: ease 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 105%);
+  width: 100%;
+  border-radius: 15px;
+}
+.checkoutButton:hover .footer {
+  opacity: 1;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 15px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 26px solid #000;
+}
+.footer::after {
+  content: "!";
+  position: absolute;
+  top: -15px;
+  left: 49.8%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1;
+}
+.foodItemsCol {
+  width: 32.2%;
+}
+.colMedium {
+  width: 48.5% !important;
+}
+.productCartRight {
+  width: 40%;
+}
+.basketContainer {
+  width: 100%;
+  max-width: 360px;
+  background: #ffffff;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+.shareCartContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff9c00;
+  padding: 20px 20px;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.textContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.textContainer span {
+  width: 100%;
+  font-weight: 600;
+}
+.shareIcon {
+  width: auto;
+}
+.copyButton {
+  background-color: white;
+  color: #ff9c00;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 40%;
+}
+
+.copyButton:hover {
+  background-color: #ffb540;
+  color: white;
+}
+.header {
+  background: #028643;
+  color: #fff;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.header h2 {
+  margin: 0;
+  margin-left: 8px;
+  font-size: 1.5rem;
+}

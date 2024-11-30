@@ -1,7 +1,36 @@
+import { useContext, useState } from "react";
 import styles from "./Payment.module.css";
+import { AppContext } from "../../context/AppContext";
+import { NavLink, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Payment() {
+  const [paymentSelected, setPaymentSelected] = useState(false);
+  const handlePaymentSelected = () => setPaymentSelected(true);
+  const navigate = useNavigate();
+  const { foodCart } = useContext(AppContext);
+  const total = 
+    foodCart
+      .reduce(
+        (total, food) => total + food.price * food.quantity,
+        0
+      );
+      // const quantity = foodCart
+      // .reduce(
+      //   (total, food) => total +  food.quantity,
+      //   0
+      // );
+
+      const handleConfirm = () =>{
+        toast.success("Order place successfully.")
+        setTimeout(()=>{
+          navigate("/order-successful");
+        },[1000])
+      }; 
+
   return (
+    <>
     <div className={styles.container}>
       <div className={styles.paymentSection}>
         <div className={styles.header}>
@@ -38,7 +67,7 @@ export default function Payment() {
               <div className={styles.paymentDetails}>
                 <p className={styles.itemName}>MaestroKard</p>
               </div>
-              <input type="checkbox" />
+              <input type="radio" name="payment" onChange={handlePaymentSelected}/>
             </div>
             <div className={styles.paymentOther}>
               <img
@@ -49,7 +78,7 @@ export default function Payment() {
               <div className={styles.paymentDetails}>
                 <p className={styles.itemName}>Paypol</p>
               </div>
-              <input type="checkbox" />
+              <input type="radio" name="payment" onChange={handlePaymentSelected} />
             </div>
             <div className={styles.paymentOther}>
               <img
@@ -60,14 +89,14 @@ export default function Payment() {
               <div className={styles.paymentDetails}>
                 <p className={styles.itemName}>Strike</p>
               </div>
-              <input type="checkbox" />
+              <input type="radio" name="payment" onChange={handlePaymentSelected} />
             </div>
             <div className={styles.paymentOther}>
               <p className="plus">+</p>
               <div className={styles.paymentDetails}>
-                <p className={styles.itemName}>Add Debit Card</p>
+                <NavLink to="/profile"> <p className={styles.itemName}>Add Debit Card</p></NavLink>
               </div>
-              <input type="checkbox" />
+              <input type="radio" name="payment" onChange={handlePaymentSelected} />
             </div>
           </div>
 
@@ -75,16 +104,18 @@ export default function Payment() {
             <div className={styles.amount}>
               <p className={styles.amountHeading}>Amount to be payed</p>
               <p className={styles.totalPrice}>
-                <b>₹240</b>
+                <b>₹{total}</b>
               </p>
             </div>
             <div className={styles.end}></div>
-            <button type="button" className={styles.paymentBtn}>
-              Choose Payment Method
+            <button type="button" className={styles.paymentBtn} onClick={handleConfirm}>
+              {paymentSelected ? "Proceed Payment": "Choose Payment Method" }
             </button>
           </div>
         </div>
       </div>
     </div>
+    <ToastContainer />
+    </>
   );
 }

@@ -9,9 +9,10 @@ import user from "../src/assets/user.png";
 import { Link, NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import { SearchContext } from "../context/SearchContext";
 
 export default function Home() {
-  const {name} = useContext(AppContext)
+  const { name } = useContext(AppContext);
   return (
     <>
       <div className={styles.headerTopMain} id="homepage">
@@ -28,7 +29,7 @@ export default function Home() {
                 <p>Regent Street, A4, A4201, London</p>
                 <button>Change Location</button>
               </div>
-              <Link to="product-cart" className={styles.cartBlock}>
+              <Link to="/products" className={styles.cartBlock}>
                 <div className={styles.myCart}>
                   <img src={cart} />
                   <p>My Cart</p>
@@ -52,11 +53,14 @@ export default function Home() {
               <ul className={styles.navListItems}>
                 {/* <!-- Menu Item Calendar --> */}
                 <li>
-                  <NavLink to="/" className={({ isActive }) =>
+                  <NavLink
+                    to="/"
+                    className={({ isActive }) =>
                       isActive
                         ? `${styles.navlist} ${styles.active}`
                         : styles.navlist
-                    }>
+                    }
+                  >
                     Home
                   </NavLink>
                 </li>
@@ -82,12 +86,14 @@ export default function Home() {
                     TrackOrder
                   </NavLink>
                 </li>
-                <li>
-                  <button className="userButton">
-                    <img src={user} alt="User" />
-                    Hey {name ? name : 'Guest'}
-                  </button>
-                </li>
+                <NavLink to="/profile">
+                  <li>
+                    <button className="userButton">
+                      <img src={user} alt="User" />
+                      Hey {name ? name : "Guest"}
+                    </button>
+                  </li>
+                </NavLink>
               </ul>
             </div>
           </div>
