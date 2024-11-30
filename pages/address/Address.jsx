@@ -19,7 +19,8 @@ export default function Address() {
       try {
         if (email) {
           const result = await getAllAddresses(email);
-          setAddresses(result ? result.data : []);
+          if(result.status === 0)
+          setAddresses(result.data);
         }
       } catch (error) {
         console.error("Failed to fetch user details:", error);
