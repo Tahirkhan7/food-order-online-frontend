@@ -19,7 +19,7 @@ export default function Address() {
       try {
         if (email) {
           const result = await getAllAddresses(email);
-          if(result.status === 0)
+          if(result.status === 200)
           setAddresses(result.data);
         }
       } catch (error) {
