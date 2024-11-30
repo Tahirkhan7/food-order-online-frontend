@@ -34,7 +34,7 @@ export default function Cart({cartToken}) {
   
   const handleCopyLink = async () => {
     toast.success("Link copied successfully.");
-    const linkToShare = `http://localhost:5173/products?cart=${token}`;
+    const linkToShare = `https://food-order-online-frontend.vercel.app/products?cart=${token}`;
     try {
       await navigator.clipboard.writeText(linkToShare);
     } catch (error) {
