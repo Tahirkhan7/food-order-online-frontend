@@ -38,8 +38,9 @@ export default function Address() {
   const handleDelete = async (id) => {
     try {
         const result = await deleteAddress(id);
+        console.log(result)
         if (result.status === 200) {
-          toast.success(result.message);
+          toast.success(result.data.message);
           setTimeout(() => {
             closeModal();
           }, [1000]);
