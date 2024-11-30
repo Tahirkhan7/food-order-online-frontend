@@ -39,7 +39,7 @@ export default function Address() {
     try {
         const result = await deleteAddress(id);
         if (result.status === 200) {
-          toast.success(result.data.message);
+          toast.success(result.message);
           setTimeout(() => {
             closeModal();
           }, [1000]);
