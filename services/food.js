@@ -8,7 +8,7 @@ export const getAllFoodByCategory = async (category) => {
 };
 
 export const getAllFoodsByCartToken = async (token) => {
-  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/orders/${token}`, {
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/orders/token/${token}`, {
     params: { token },
   });
   return res;
