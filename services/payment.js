@@ -3,17 +3,17 @@ import axios from "axios";
 const BASE_URL = import.meta.env.API_URL;
 
 export const getAllPayments = async (email) => {
-  const res = await axios.get(`${BASE_URL}/api/payment/all/${email}`);
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/payment/all/${email}`);
   return res;
 };
 
 export const getPaymentById = async (id) => {
-  const res = await axios.get(`${BASE_URL}/api/payment/${id}`);
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/payment/${id}`);
   return res;
 };
 
 export const addPayment = async (data) => {
-  const res = await axios.post(`${BASE_URL}/api/payment/add`, data, {
+  const res = await axios.post(`https://food-order-online-backend.onrender.com/api/payment/add`, data, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -22,7 +22,7 @@ export const addPayment = async (data) => {
 };
 
 export const updatePayment = async (data) => {
-  const res = await axios.put(`${BASE_URL}/api/payment/edit`, data, {
+  const res = await axios.put(`https://food-order-online-backend.onrender.com/api/payment/edit`, data, {
     headers: {
       "Content-Type": "application/json",
     },
@@ -31,6 +31,6 @@ export const updatePayment = async (data) => {
 };
 
 export const deletePayment = async (id) => {
-  const res = await axios.delete(`${BASE_URL}/api/payment/delete/${id}`);
+  const res = await axios.delete(`https://food-order-online-backend.onrender.com/api/payment/delete/${id}`);
   return res;
 };

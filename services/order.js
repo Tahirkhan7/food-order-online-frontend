@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const placeOrder = async (data) => {
   const res = await axios.post(
-    `${import.meta.env.API_URL}/api/orders/update`,
+    `https://food-order-online-backend.onrender.com/api/orders/update`,
     data,
     {
       headers: {
@@ -14,25 +14,25 @@ export const placeOrder = async (data) => {
 };
 
 export const getAllOrders = async () => {
-  const res = await axios.get(`${import.meta.env.API_URL}/api/orders/all`);
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/orders/all`);
   return res;
 };
 
 export const getOrderByToken = async (token) => {
-  const res = await axios.get(`${import.meta.env.API_URL}/api/orders/token/${token}`, {
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/orders/token/${token}`, {
     params: { token },
   });
   return res;
 };
 
 export const updateOrderStatusApi = async (token) => {
-  const res = await axios.put(`${import.meta.env.API_URL}/api/orders/updateStatus`, {
+  const res = await axios.put(`https://food-order-online-backend.onrender.com/api/orders/updateStatus`, {
     params: { token },
   });
   return res;
 };
 
 export const getOrderById = async (orderId) => {
-  const res = await axios.get(`${import.meta.env.API_URL}/api/orders/${orderId}`);
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/orders/${orderId}`);
   return res;
 };

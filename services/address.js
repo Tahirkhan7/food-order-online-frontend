@@ -31,6 +31,6 @@ export const updateAddress = async (data) => {
 };
 
 export const deleteAddress = async (id) => {
-  const res = await axios.delete(`${BASE_URL}/api/address/delete/${id}`);
+  const res = await axios.delete(`https://food-order-online-backend.onrender.com/api/address/delete/${id}`);
   return res;
 };

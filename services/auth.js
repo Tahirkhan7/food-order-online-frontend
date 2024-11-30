@@ -1,7 +1,7 @@
 import axios from "axios";
 export const register = async (data) => {
   const res = axios.post(
-    `${import.meta.env.API_URL}/api/user/register`,
+    `https://food-order-online-backend.onrender.com/api/user/register`,
     data,
     {
       headers: {
@@ -15,7 +15,7 @@ export const register = async (data) => {
 
 export const loginUser = async (data) => {
   const res = axios.post(
-    `${import.meta.env.API_URL}/api/user/login`,
+    `https://food-order-online-backend.onrender.com/api/user/login`,
     data,
     {
       headers: {
@@ -27,7 +27,7 @@ export const loginUser = async (data) => {
 };
 
 export const getAllUsers = async (email) => {
-  const res = await axios.get(`${import.meta.env.API_URL}/api/user`, {
+  const res = await axios.get(`https://food-order-online-backend.onrender.com/api/user`, {
     params: { email },
   });
   return res;
@@ -36,7 +36,7 @@ export const getAllUsers = async (email) => {
 
 export const myDetails = async (email) => {
   const res = axios.get(
-    `${import.meta.env.API_URL}/api/user/${email}`,
+    `https://food-order-online-backend.onrender.com/api/user/${email}`,
     {}
   );
   return res;
@@ -44,7 +44,7 @@ export const myDetails = async (email) => {
 
 export const updateUser = async (data) => {
   const res = await axios.put(
-    `${import.meta.env.API_URL}/api/user/update`,
+    `https://food-order-online-backend.onrender.com/api/user/update`,
     data,
     {
       headers: {
