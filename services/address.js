@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL = import.meta.env.API_URL;
 
 export const getAllAddresses = async (email) => {
   const res = await axios.get(`${BASE_URL}/api/address/all/${email}`);
